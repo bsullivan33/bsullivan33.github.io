@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content='Brian Sullivan'>
+    <link rel='stylesheet' href='style 2.css'>
+    <script src='scripts.mjs'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <div class="video-wrap">
+        <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=redzone" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-wrap">
+        <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=bengals" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div class="video-item">
+      <div class="video-wrap">
+        <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=dolphins" allowfullscreen=""></iframe>
+      </div>
+    </div>
+    <div class="video-item">
+        <div class="video-wrap">
+          <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=jaguars" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-wrap">
+          <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=panthers" allowfullscreen=""></iframe>
+        </div>
+      </div>
+      <div class="video-item">
+        <div class="video-wrap">
+          <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=giants" allowfullscreen=""></iframe>
+        </div>
+      </div>
+  </div>
+  
+</body>
+
+<script>
+    $('.video-item').on('click', function(){
+        this.child(svg).click()
+    })
+    $(iframe).on('click', function(){
+        this.child(svg).click()
+    })
+</script>
+</html>
