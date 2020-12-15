@@ -14,31 +14,43 @@
   <div class="video-grid">
     <div class="video-item">
       <div class="video-wrap">
+        <div class = 'video-edit'>edit</div>
+        <div class = 'video-main'>main</div>
         <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=redzone" allowfullscreen=""></iframe>
       </div>
     </div>
     <div class="video-item">
       <div class="video-wrap">
+        <div class = 'video-edit'>edit</div>
+        <div class = 'video-main'>main</div>
         <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=bengals" allowfullscreen=""></iframe>
       </div>
     </div>
     <div class="video-item">
       <div class="video-wrap">
+        <div class = 'video-edit'>edit</div>
+        <div class = 'video-main'>main</div>
         <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=dolphins" allowfullscreen=""></iframe>
       </div>
     </div>
     <div class="video-item">
         <div class="video-wrap">
+          <div class = 'video-edit'>edit</div>
+          <div class = 'video-main'>main</div>
           <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=jaguars" allowfullscreen=""></iframe>
         </div>
       </div>
       <div class="video-item">
         <div class="video-wrap">
+          <div class = 'video-edit'>edit</div>
+          <div class = 'video-main'>main</div>
           <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=panthers" allowfullscreen=""></iframe>
         </div>
       </div>
       <div class="video-item">
         <div class="video-wrap">
+          <div class = 'video-edit'>edit</div>
+          <div class = 'video-main'>main</div>
           <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=giants" allowfullscreen=""></iframe>
         </div>
       </div>
@@ -47,11 +59,16 @@
 </body>
 
 <script>
-    $('.video-item').on('click', function(){
-        this.child(svg).click()
-    })
-    $(iframe).on('click', function(){
-        this.child(svg).click()
+
+    $('.video-main').on('click', function(){
+      this.parentNode.parentNode.parentNode.insertBefore(this.parentNode.parentNode, this.parentNode.parentNode.parentNode.firstElementChild)
+      this.next().click()
+      }
+    )
+
+    $('.video-edit').on('click', function(){
+      let game = prompt()
+      this.parentNode.getElementsByTagName('iframe')[0].setAttribute('src', 'http://givemenbastreams.com/nfl.php?g=' + game)
     })
 </script>
 </html>
