@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <title></title>
+    <meta name='description' content=''>
+    <meta name='keywords' content=''>
+    <meta name='author' content='Brian Sullivan'>
+    <link rel='stylesheet' href='style3.css'>
+    <script src='scripts.mjs'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+  <div class="video-grid">
+    <div class="video-item">
+      <div class="video-wrap">
+        <div class = 'video-edit'>edit</div>
+        <div class = 'video-main'>main</div>
+        <iframe class="embed-responsive-item" src="http://givemenbastreams.com/nfl.php?g=redzone" allowfullscreen=""></iframe>
+      </div>
+    </div>
+
+    
+      
+  </div>
+  
+</body>
+
+<script>
+
+    $('.video-main').on('click', function(){
+      this.parentNode.parentNode.parentNode.insertBefore(this.parentNode.parentNode, this.parentNode.parentNode.parentNode.firstElementChild)
+      this.next().click()
+      }
+    )
+
+    $('.video-edit').on('click', function(){
+      let game = prompt()
+      this.parentNode.getElementsByTagName('iframe')[0].setAttribute('src', 'http://givemenbastreams.com/nfl.php?g=' + game)
+    })
+</script>
+</html>

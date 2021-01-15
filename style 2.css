@@ -45,16 +45,18 @@ body {
   width: 480px;
 }
 
+
 .video-main{
   position: absolute;
   border-radius: 20px;
   background-color: cornflowerblue;
   right: 5pt;
-  top: 0pt;
+  top: -5pt;
   padding: 5pt;
   visibility: hidden;
   z-index: 9;
 }
+
 
 .video-edit{
   position: absolute;
